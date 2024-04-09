@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70B041DE2BC5E3400043BAD2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B041DD2BC5E3400043BAD2 /* LoginView.swift */; };
+		70B041E02BC5EB6C0043BAD2 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B041DF2BC5EB6C0043BAD2 /* ResetPasswordView.swift */; };
+		70B041E22BC5EE540043BAD2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B041E12BC5EE540043BAD2 /* SignUpView.swift */; };
 		70CAC1B72BC1B4420047175E /* final_projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CAC1B62BC1B4420047175E /* final_projectApp.swift */; };
 		70CAC1B92BC1B4420047175E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CAC1B82BC1B4420047175E /* ContentView.swift */; };
 		70CAC1BB2BC1B4440047175E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70CAC1BA2BC1B4440047175E /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70B041DD2BC5E3400043BAD2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		70B041DF2BC5EB6C0043BAD2 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		70B041E12BC5EE540043BAD2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		70CAC1B32BC1B4420047175E /* final-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "final-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70CAC1B62BC1B4420047175E /* final_projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = final_projectApp.swift; sourceTree = "<group>"; };
 		70CAC1B82BC1B4420047175E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +59,9 @@
 			children = (
 				70CAC1B62BC1B4420047175E /* final_projectApp.swift */,
 				70CAC1B82BC1B4420047175E /* ContentView.swift */,
+				70B041DD2BC5E3400043BAD2 /* LoginView.swift */,
+				70B041E12BC5EE540043BAD2 /* SignUpView.swift */,
+				70B041DF2BC5EB6C0043BAD2 /* ResetPasswordView.swift */,
 				70CAC1BA2BC1B4440047175E /* Assets.xcassets */,
 				70CAC1BC2BC1B4440047175E /* Preview Content */,
 			);
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B041DE2BC5E3400043BAD2 /* LoginView.swift in Sources */,
+				70B041E22BC5EE540043BAD2 /* SignUpView.swift in Sources */,
 				70CAC1B92BC1B4420047175E /* ContentView.swift in Sources */,
 				70CAC1B72BC1B4420047175E /* final_projectApp.swift in Sources */,
+				70B041E02BC5EB6C0043BAD2 /* ResetPasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
