@@ -7,7 +7,11 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct SplashScreen: View {
+    @State private var backgroundImage: UIImage? = nil
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -16,13 +20,15 @@ struct SplashScreen: View {
                 Text("Welcome to Travel diary")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .foregroundColor(.blue)
+                    .foregroundColor(.white)
+                    .shadow(color: .black, radius: 3, x: 0, y: 3) // Adding shadow for better readability
                 
                 Image(systemName: "airplane")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100, height: 100)
-                    .foregroundColor(.blue)
+                    .foregroundColor(.white)
+                    .shadow(color: .black, radius: 3, x: 0, y: 3) // Adding shadow for better readability
                 
                 NavigationLink(destination: SignUpView()) {
                     Text("Sign up with Email")
@@ -37,22 +43,45 @@ struct SplashScreen: View {
                 
                 HStack {
                     Text("Have an account already?")
+                        .foregroundColor(.white)
                     NavigationLink(destination: LoginView()) {
                         Text("Login")
                             .padding()
                             .foregroundColor(.blue)
                     }
                 }
-                
-                //                SignInWithGoogleButton()
-                //                    .padding(.top)
-                
                 Spacer()
+            }
+            .background(
+                Group {
+                    if let backgroundImage = backgroundImage {
+                        Image(uiImage: backgroundImage)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .edgesIgnoringSafeArea(.all)
+                    } else {
+                        Color.clear // Placeholder background color until image is loaded
+                    }
+                }
+            )
+            .onAppear {
+                downloadImage(from: URL(string: "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7-1200-80.jpg")!)
             }
             .navigationBarHidden(true)
         }
     }
+    
+    func downloadImage(from url: URL) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            DispatchQueue.main.async {
+                self.backgroundImage = UIImage(data: data)
+            }
+        }.resume()
+    }
 }
+
+
 #Preview {
     SplashScreen()
 }
