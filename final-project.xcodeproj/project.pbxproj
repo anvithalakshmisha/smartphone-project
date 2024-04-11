@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		705F5D7F2BC89CF6007E3333 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705F5D7E2BC89CF6007E3333 /* GalleryView.swift */; };
+		705F5D852BC89D09007E3333 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705F5D802BC89D08007E3333 /* HomeScreenView.swift */; };
+		705F5D862BC89D09007E3333 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705F5D812BC89D08007E3333 /* ProfileView.swift */; };
+		705F5D872BC89D09007E3333 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705F5D822BC89D08007E3333 /* MapView.swift */; };
+		705F5D882BC89D09007E3333 /* TripeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705F5D832BC89D08007E3333 /* TripeView.swift */; };
+		705F5D892BC89D09007E3333 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705F5D842BC89D09007E3333 /* HomeView.swift */; };
 		70B041DE2BC5E3400043BAD2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B041DD2BC5E3400043BAD2 /* LoginView.swift */; };
 		70B041E02BC5EB6C0043BAD2 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B041DF2BC5EB6C0043BAD2 /* ResetPasswordView.swift */; };
 		70B041E22BC5EE540043BAD2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B041E12BC5EE540043BAD2 /* SignUpView.swift */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		705F5D7E2BC89CF6007E3333 /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		705F5D802BC89D08007E3333 /* HomeScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		705F5D812BC89D08007E3333 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		705F5D822BC89D08007E3333 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		705F5D832BC89D08007E3333 /* TripeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripeView.swift; sourceTree = "<group>"; };
+		705F5D842BC89D09007E3333 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		70B041DD2BC5E3400043BAD2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		70B041DF2BC5EB6C0043BAD2 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		70B041E12BC5EE540043BAD2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -57,6 +69,12 @@
 		70CAC1B52BC1B4420047175E /* final-project */ = {
 			isa = PBXGroup;
 			children = (
+				705F5D802BC89D08007E3333 /* HomeScreenView.swift */,
+				705F5D842BC89D09007E3333 /* HomeView.swift */,
+				705F5D822BC89D08007E3333 /* MapView.swift */,
+				705F5D812BC89D08007E3333 /* ProfileView.swift */,
+				705F5D832BC89D08007E3333 /* TripeView.swift */,
+				705F5D7E2BC89CF6007E3333 /* GalleryView.swift */,
 				70CAC1B62BC1B4420047175E /* final_projectApp.swift */,
 				70CAC1B82BC1B4420047175E /* ContentView.swift */,
 				70B041DD2BC5E3400043BAD2 /* LoginView.swift */,
@@ -146,10 +164,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705F5D862BC89D09007E3333 /* ProfileView.swift in Sources */,
+				705F5D882BC89D09007E3333 /* TripeView.swift in Sources */,
 				70B041DE2BC5E3400043BAD2 /* LoginView.swift in Sources */,
+				705F5D7F2BC89CF6007E3333 /* GalleryView.swift in Sources */,
 				70B041E22BC5EE540043BAD2 /* SignUpView.swift in Sources */,
+				705F5D892BC89D09007E3333 /* HomeView.swift in Sources */,
 				70CAC1B92BC1B4420047175E /* ContentView.swift in Sources */,
 				70CAC1B72BC1B4420047175E /* final_projectApp.swift in Sources */,
+				705F5D852BC89D09007E3333 /* HomeScreenView.swift in Sources */,
+				705F5D872BC89D09007E3333 /* MapView.swift in Sources */,
 				70B041E02BC5EB6C0043BAD2 /* ResetPasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

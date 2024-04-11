@@ -39,9 +39,11 @@ struct LoginView: View {
                     .padding(.horizontal)
             }
             
-            NavigationLink(destination: HomeScreenView(), isActive: $isLoggedin) {
-                EmptyView()
-            }
+            NavigationLink(
+                destination: HomeScreenView(),
+                isActive: $isLoggedin,
+                label: { EmptyView() }
+            )
             
             Button(action: {
                 isResetPasswordShowing.toggle()

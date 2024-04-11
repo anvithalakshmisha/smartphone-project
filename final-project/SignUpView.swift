@@ -14,6 +14,7 @@ struct SignUpView: View {
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
     @State private var errorMessage: String? = nil
+    @State private var isLoggedin = false // Add state variable to control navigation
     
     var body: some View {
         VStack {
@@ -42,9 +43,9 @@ struct SignUpView: View {
                 print("Password: \(password)")
                 print("Confirm Password: \(confirmPassword)")
                 
-                // Here you can perform validation and actual sign-up process
-                // For simplicity, let's just show a success message
-                errorMessage = "Sign up successful"
+                // Here you can check if the login is successful, if yes, navigate to HomeScreenView
+                // For simplicity, let's just set a flag to true
+                isLoggedin = true
             }) {
                 Text("Sign Up")
                     .padding()
@@ -54,9 +55,11 @@ struct SignUpView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal)
             }
-            .alert(isPresented: Binding<Bool>.constant(errorMessage != nil)) {
-                Alert(title: Text("Success"), message: Text(errorMessage ?? ""), dismissButton: .default(Text("OK")))
-            }
+            NavigationLink(
+                destination: HomeScreenView(),
+                isActive: $isLoggedin,
+                label: { EmptyView() }
+            )
         }
         .padding()
     }
