@@ -1,11 +1,3 @@
-//
-//  LoginView.swift
-//  final-project
-//
-//  Created by Anvitha Lakshmisha on 4/9/24.
-//
-
-import Foundation
 import SwiftUI
 
 struct LoginView: View {
@@ -14,6 +6,7 @@ struct LoginView: View {
     @State private var resetPasswordEmail: String = ""
     @State private var isResetPasswordShowing = false
     @State private var errorMessage: String? = nil
+    @State private var isLoggedin = false // Add state variable to control navigation
     
     var body: some View {
         VStack {
@@ -33,9 +26,9 @@ struct LoginView: View {
                 print("Username: \(username)")
                 print("Password: \(password)")
                 
-                // Here you can check if the login is successful, if not, show an error message
-                // For simplicity, let's just show a generic error message
-                errorMessage = "Invalid username or password"
+                // Here you can check if the login is successful, if yes, navigate to HomeScreenView
+                // For simplicity, let's just set a flag to true
+                isLoggedin = true
             }) {
                 Text("Login")
                     .padding()
@@ -45,8 +38,9 @@ struct LoginView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal)
             }
-            .alert(isPresented: Binding<Bool>.constant(errorMessage != nil)) {
-                Alert(title: Text("Error"), message: Text(errorMessage ?? ""), dismissButton: .default(Text("OK")))
+            
+            NavigationLink(destination: HomeScreenView(), isActive: $isLoggedin) {
+                EmptyView()
             }
             
             Button(action: {
