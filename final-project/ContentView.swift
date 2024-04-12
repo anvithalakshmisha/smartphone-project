@@ -14,7 +14,7 @@ struct SplashScreen: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack() {
                 Spacer()
                 
                 Text("Welcome to Travel diary")
@@ -53,31 +53,13 @@ struct SplashScreen: View {
                 Spacer()
             }
             .background(
-                Group {
-                    if let backgroundImage = backgroundImage {
-                        Image(uiImage: backgroundImage)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .edgesIgnoringSafeArea(.all)
-                    } else {
-                        Color.clear // Placeholder background color until image is loaded
-                    }
-                }
+                Image("splashscreen")
+                    .resizable()
+                .aspectRatio(contentMode: .fill)
+                .edgesIgnoringSafeArea(.all)
             )
-            .onAppear {
-                downloadImage(from: URL(string: "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7-1200-80.jpg")!)
-            }
             .navigationBarHidden(true)
         }
-    }
-    
-    func downloadImage(from url: URL) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil else { return }
-            DispatchQueue.main.async {
-                self.backgroundImage = UIImage(data: data)
-            }
-        }.resume()
     }
 }
 
