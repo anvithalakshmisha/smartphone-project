@@ -40,7 +40,7 @@ struct LoginView: View {
             }
             
             NavigationLink(
-                destination: HomeScreenView(),
+                destination: HomeScreenView().navigationBarBackButtonHidden(true),
                 isActive: $isLoggedin,
                 label: { EmptyView() }
             )

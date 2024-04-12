@@ -56,6 +56,16 @@ struct TripsView: View {
             }
             .navigationTitle("Trips")
             .navigationBarItems(trailing: addButton)
+            
+            NavigationLink(
+                destination: EditTripView(trip: editTripNavigation ?? Trip(thumbnail: "", title: "", location: "", startDate: Date(), endDate: Date())),
+                isActive: Binding(get: { editTripNavigation != nil }, set: { _ in editTripNavigation = nil })
+            ) {
+                EmptyView()
+            }
+            .hidden()
+
+
 
         }
     }
@@ -68,8 +78,6 @@ struct TripsView: View {
     
     private func editTrip(_ trip: Trip) {
         editTripNavigation = trip
-        isEditMode = true
-        print(trip)
     }
     
     var addButton: some View {
@@ -102,33 +110,6 @@ struct TripRow: View {
         .padding(.vertical, 8)
     }
 }
-
-struct TripDetailView: View {
-    let trip: Trip
-    
-    var body: some View {
-        VStack {
-            Text(trip.title)
-                .font(.title)
-            Text(trip.location)
-                .foregroundColor(.secondary)
-            Text("\(trip.startDate, formatter: DateFormatter.shortDate) - \(trip.endDate, formatter: DateFormatter.shortDate)")
-                .foregroundColor(.secondary)
-            Spacer()
-        }
-        .padding()
-        .navigationTitle(trip.title)
-    }
-}
-
-extension DateFormatter {
-    static let shortDate: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        return formatter
-    }()
-}
-
 
 #Preview {
     TripsView()

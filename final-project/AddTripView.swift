@@ -74,7 +74,6 @@ struct AddTripView: View {
             .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
                 ImagePicker(image: $thumbnailImage, sourceType: sourceType ?? .photoLibrary)
             }
-            .navigationBarTitle("Add Trip", displayMode: .inline)
         }
     }
     

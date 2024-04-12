@@ -25,6 +25,7 @@
 		70F4DB1A2BC9C7DE00178BF8 /* AddTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F4DB192BC9C7DE00178BF8 /* AddTripView.swift */; };
 		70F4DB1D2BC9CF7700178BF8 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F4DB1C2BC9CF7700178BF8 /* ImagePicker.swift */; };
 		70F4DB1F2BC9CFC600178BF8 /* EditTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F4DB1E2BC9CFC600178BF8 /* EditTripView.swift */; };
+		70F4DB212BC9E1BA00178BF8 /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F4DB202BC9E1BA00178BF8 /* TripDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		70F4DB192BC9C7DE00178BF8 /* AddTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripView.swift; sourceTree = "<group>"; };
 		70F4DB1C2BC9CF7700178BF8 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		70F4DB1E2BC9CFC600178BF8 /* EditTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripView.swift; sourceTree = "<group>"; };
+		70F4DB202BC9E1BA00178BF8 /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				70F4DB172BC9AEEF00178BF8 /* TryView.swift */,
 				70F4DB192BC9C7DE00178BF8 /* AddTripView.swift */,
 				70F4DB1E2BC9CFC600178BF8 /* EditTripView.swift */,
+				70F4DB202BC9E1BA00178BF8 /* TripDetailView.swift */,
 			);
 			path = "final-project";
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				70F4DB1A2BC9C7DE00178BF8 /* AddTripView.swift in Sources */,
 				70CAC1B92BC1B4420047175E /* ContentView.swift in Sources */,
 				70CAC1B72BC1B4420047175E /* final_projectApp.swift in Sources */,
+				70F4DB212BC9E1BA00178BF8 /* TripDetailView.swift in Sources */,
 				705F5D852BC89D09007E3333 /* HomeScreenView.swift in Sources */,
 				70F4DB1D2BC9CF7700178BF8 /* ImagePicker.swift in Sources */,
 				70F4DB1F2BC9CFC600178BF8 /* EditTripView.swift in Sources */,
